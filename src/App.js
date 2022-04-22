@@ -1,24 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import AddItem from './components/AddItem';
+import Header from './components/Header';
+import DisplayItem from './components/DisplayItem';
+import { useState } from 'react';
+import UpdateItem from './components/UpdateItem';
 
 function App() {
+  const [isEdit, setIsEdit] = useState(false)
+  const [idToBeEdited, setIdToBeEdited] = useState('')
+  const [inputValue, setInputValue] = useState('')
+
+  const isEditHandler = (isEditInput, inputEditId) => {
+    setIsEdit(isEditInput)
+    setIdToBeEdited(inputEditId)
+  }
+  const addItemInputHandler = (item) => {
+    setInputValue(item)
+  }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // <Provider store={store}>
+    <>
+      <Header />
+      <AddItem addItemInputHandler={addItemInputHandler}/>
+      <DisplayItem isEditHandler={isEditHandler}/>
+      <UpdateItem isEdit={isEdit} isEditHandler={isEditHandler} idToBeEdited={idToBeEdited} inputValue={inputValue}/>
+      </>
+    // </Provider>
   );
 }
 

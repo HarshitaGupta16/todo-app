@@ -1,0 +1,28 @@
+ul {
+    padding-inline-start: 15px;
+}
+
+li {
+    list-style: none;
+    background-color: lightgreen;
+    width: 70%;
+    padding: 1rem;
+    margin-top: 1rem;
+    min-height: 1rem;
+    word-wrap: break-word;
+}
+
+.delete-btn {
+    color: palevioletred;
+    float: right;
+    padding: 0.4rem 1rem;
+    margin-top: -1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.delete-btn:hover{
+    background-color: rgb(141, 207, 42);
+    background-position-y: center;
+    background-size: contain;
+}

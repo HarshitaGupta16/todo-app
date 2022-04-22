@@ -1,0 +1,32 @@
+label {
+    display: block;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    color: #a09d9d;
+}
+
+.input-box{
+    width: 70%;
+    display: inline-block;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid #a09d9d;
+    font-size: 1.5rem;
+}
+
+button {
+    background-color: rgb(40, 144, 230);
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    display: block;
+    margin-left: 1rem;
+    cursor: pointer;
+    color: rgb(230, 236, 238);
+    border: 1px solid rgb(40, 144, 230);
+}
+
+input:focus {
+    border: 3px solid #555;
+}
