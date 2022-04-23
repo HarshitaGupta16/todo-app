@@ -1,4 +1,3 @@
-import React from 'react'
 import { ADD_ITEM, DELETE_ITEM, UPDATE_ITEM } from './ActionTypes'
 
 // const initialState = [{id: 0, desc: ''}]
@@ -49,7 +48,9 @@ const reducer = (state=initialState, action) => {
                     ] 
                 }
             }
+            return state
         })
+        break
     default:
         return state
   }

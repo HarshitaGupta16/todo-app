@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { deleteItem } from "../redux/action-creators";
 import classes from "./DisplayItem.module.css";
