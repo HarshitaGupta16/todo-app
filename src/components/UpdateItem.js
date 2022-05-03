@@ -16,7 +16,7 @@ const UpdateItem = ({isEdit, isEditHandler, idToBeEdited, inputValue}) => {
     <div className={classes.overlay} style={{display: isEdit ? 'block': 'none'  }} >
         <div className={classes.container}>
           
-      {isEdit && <input type="text" onChange={event => setUpdatedValue(event.target.value)} defaultValue={updatedValue} autoFocus/>}
+      {isEdit && <input type="text" onChange={event => setUpdatedValue(event.target.value)} defaultValue={inputValue} autoFocus/>}
       {/* {isEdit && inputRef.current.focus()} */}
       {isEdit && <button onClick={updateHandler}>Update</button>}
       </div>

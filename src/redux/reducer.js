@@ -32,25 +32,22 @@ const reducer = (state=initialState, action) => {
             ...state,
             list: newList
         }
-    case UPDATE_ITEM:
-        console.log(action.payload.itemName)
+    case UPDATE_ITEM:{
         // console.log(idToBeUpdated, itemName)
-         state.list.map(li => {
+          return {...state, list: state.list.map(li => {
             if(li.id === action.payload.id) {
-                li.item = action.payload.itemName
-                console.log(li.item)
                 return {
-                    ...state,
-                    list: [
-                        {...state.list,
-                            item: action.payload.itemName}
-                        
-                    ] 
+                    ...li,
+                    item: action.payload.itemName
                 }
             }
-            return state
+            return li
         })
-        break
+    }
+    }
+        // return {...state,
+            // list: updatedList}
+        // break
     default:
         return state
   }
